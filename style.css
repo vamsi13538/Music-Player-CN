@@ -1,0 +1,1741 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Root CSS Variables for different theme colors */
+:root {
+    --text-white: #FDFDFE;
+    --Coldplay-bg-color: #141B41;
+    --Song-bg-color: #1A1E33;
+    --body-bg-color: #0C1027;
+    --music-box-bg-color: #282828;
+    --notification-indication-color: red;
+    --viewall-link-color: black;
+  }
+
+/* Resetting border and padding */
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    caret-color: transparent;
+    font-family: "Ubuntu Sans Mono", monospace;
+    background-color: var(--body-bg-color);
+    color: var(--text-white);
+}
+
+/* Goto top section starts here */
+/* Innovation - Addition */
+.GoToTopContainer{
+    position: fixed;
+    bottom: 16%;
+    left: 78%;
+    transform: translateX(50%);
+    border: 1px dashed var(--body-bg-color);
+    border-radius: 50%;
+    padding: 0.2rem 0.2rem;
+    background-color: var(--text-white);
+    width: max-content;
+    height: max-content;
+    z-index: 20;
+    display: none;
+    cursor: pointer;
+}
+
+.GoToTopContent a {
+    text-decoration: none;
+    color: var(--body-bg-color);
+}
+
+.GoToTopContent{
+    padding: 0.4rem 0.4rem;
+}
+
+/* Goto top section ends here */
+
+/* navLeftContainer starts here */
+.ninjaLogo img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navLeftContainer{
+    display: flex;
+    flex: row;
+    gap: 0.8rem;
+    padding: 0.4rem 0.2rem;
+}
+
+.pageName{
+    padding-left: 6rem;
+    font-size: 1rem;
+}
+
+.pageName a{
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+.ninjaLogo{
+    position: relative;
+}
+
+.ninjaLogo::after {
+    content: 'Ninja Studio';
+    position: absolute;
+    top: 20%;
+    padding: 0rem 0.4rem;
+    font-weight: 900;
+}
+
+/* navLeftContainer ends here */
+
+
+/* navRightContainer starts here */
+
+.userProfile img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.searchContainer{
+    position: relative;
+    width: 18.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.notificationIcon{
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.notificationIcon::after{
+    content: '.';
+    position: absolute;
+    top: -94%;
+    left: 76%;
+    font-size: 2.4rem;
+    color: var(--notification-indication-color);
+    transform: translateX(-50%);
+    z-index: 0.5;
+}
+
+#UserProfile2{
+    display: none;
+}
+
+#searchInput{
+    width: calc(100%);
+    padding: 0.4rem 0rem;
+    padding-left: 1.6rem;
+    border-top-left-radius: 1.4rem;
+    border-bottom-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+    font-size: 0.9rem;
+    caret-color: black;
+    background-color: var(--Coldplay-bg-color);
+}
+
+#SearchButton, #microphoneButton{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#SearchButton{
+    left: 2%;
+    padding: .8rem 0rem;
+    padding-left: 0.1rem;
+    cursor: pointer;
+}
+
+#microphoneButton{
+    right: 2%;
+    padding: 0.8rem 0rem;
+    padding-right: 0.1rem;
+    cursor: pointer;
+}
+
+.navRightContainer{
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.4rem 0.2rem;
+    width: 45%;
+}
+
+#HamburgerMenuContainer{
+    display: none;
+}
+
+/* navRightContainer ends here */
+
+/* NavBox starts here */
+#navBoxContainer{
+    box-sizing: border-box;
+    height: auto;
+    width: 99%;
+    margin: 0rem auto;
+    padding: 0.4rem 0.8rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.2rem;
+    background-color: var(--body-bg-color);
+    color: var(--text-white);
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 6;
+}
+
+#navBoxContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* NavBox ends here */
+/* MainBox starts here */
+#mainBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: auto;
+    width: 96%;
+    margin: 0.8rem auto;
+    padding: 0.2rem 0.8rem;
+}
+
+/* MainBox ends here */
+
+/* Article section starts here */
+.articleContainer{
+    width: 65%;
+    margin-right: 0.8rem;
+    height: max-content;
+}
+
+.cardBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    height: 145px;
+    cursor: pointer;
+    transition: width 0.8s ease-in-out;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover{
+    width: calc((100% + 30rem)  / 3);
+    z-index: 3;
+}
+
+
+.card1{
+    border: 1px solid var(--text-white);
+}
+.card2{
+    border: 1px solid var(--text-white);
+}
+.card3{
+    border: 1px solid var(--text-white);
+}
+
+/* Article section ends here */
+
+/* Aside section starts here */
+.asideContainer{
+    width: 35%;
+}
+
+.asideHeader{
+    margin: 0.2rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.queueName{
+    height: max-content;
+}
+
+
+.queueName h3{
+    margin-top: 0rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.3vw;
+}
+
+.queueDropdownContainer h5{
+    margin-top: 0rem;
+    margin-bottom: 0.6rem;
+}
+
+.queueDropdownContainer{
+    margin-right: 0.62rem;
+}
+
+#queueDropdown{
+    border: none;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.0vw;
+    background-color: var(--body-bg-color);
+    color: var(--text-white);
+}
+
+#queueDropdown option {
+    border: none;
+    padding: 0.4rem 0.6rem;
+    background-color: var(--body-bg-color);
+    color: var(--text-white);
+}
+
+/* Aside section ends here */
+
+/* Queuelist starts here */
+.queueList{
+    width: 100%;
+}
+
+/* Queuelist ends here */
+
+/* SongList starts here */
+
+.queueSongContainer{
+    width: 85%;
+    margin: 0rem auto;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    max-height: 140vh;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-color: transparent transparent;
+}
+
+#songListPlayButtonList{
+    position: relative;
+}
+
+#songListPlayButton{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.songListContent{
+    width: 3.5vw;
+    height: 3.5vw;
+    box-shadow: 0 0 5px 2px rgba(167, 212, 167, 0.7);
+}
+
+.songListContent img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.songListInside{
+    display: flex;
+    align-items: center;
+    margin-top: 0.08rem;
+    margin-bottom: 1rem;
+}
+
+.songList{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songName {
+    margin-left: 0.62rem;
+    font-weight: bold;
+    font-size: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.0vw;
+}
+
+.songName span {
+    font-size: 0.8vw;
+    font-weight: normal;
+}
+
+.fa-heart {
+    margin-right: 0.62rem;
+    cursor: pointer;
+    color: var(--text-white);
+    font-size: 1.2vw;
+}
+
+.listNumber{
+    margin-right: 0.62rem;
+    padding-left: 0.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.14rem;
+}
+
+.fa-headphones-simple{
+    font-size: 1.14rem;
+}
+
+/* SongList ends here */
+
+/* Latest releases starts here */
+.latestReleasesTopContainer{
+    width: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    height: max-content;
+}
+
+.latestReleasesTopCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
+    width: calc(85% / 2);
+}
+
+.lastestReleasesText{
+    padding-left: 0.05rem;
+    margin-right: 1rem;
+    width: max-content;
+}
+
+.lastestReleasesText h4{
+    margin: 0;
+}
+
+#latestReleasesPlayButtonList{
+    position: relative;
+}
+
+.latestReleasesPlayButton{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.4vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.latestReleasesPlayButton:hover{
+    opacity: 1;
+}
+
+
+.latestReleasesCardleft{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.latestReleasesCardContent{
+    padding-left: 0.8rem;
+    padding-right: 0.4rem;
+    font-size: 1.1vw;
+}
+
+.latestReleasesCardRight{
+    position: relative;
+    width: max-content;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.latestReleasesCardImage{
+    width: 7.5vw;
+    height: 7.5vw;
+}
+
+.latestReleasesCardImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.latestReleasesCardImage img:hover{
+    cursor: pointer;
+}
+
+.latestReleasesCardImage:hover .latestReleasesPlayButton{
+    opacity: 1;
+}
+
+.latestReleasesCardContent p span{
+    font-weight: normal;
+}
+
+.textBold{
+    font-weight: bolder;
+}
+
+.moreOptionsList{
+    position: absolute;
+    top: 38%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: whitesmoke;
+    width: max-content;
+    height: max-content;
+    margin: 0.2rem 0rem;
+    padding: 0.4rem 0.8rem;
+    z-index: 1;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--text-white);
+    color: var(--body-bg-color);
+    animation: MoreOptionsListFadeIn 1s ease-in-out forwards;
+}
+
+
+@keyframes MoreOptionsListFadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.moreOptionsList li{
+    list-style: none;
+    text-align: start;
+    padding: 0.2rem 0rem;
+}
+
+.moreOptionsList li:last-child{
+    border-bottom: none;
+}
+
+.moreOptionsListItem .fa-heart{
+    color: var(--body-bg-color);
+}
+
+#moreOptionsIcon{
+    font-size: 1.4rem;
+}
+
+#moreOptionsIcon:hover{
+    cursor: pointer;
+}
+
+.latestReleasesTopMainCard{
+    display: flex;
+    margin: 0.4rem 0rem;
+}
+
+/* Latest releases ends here */
+
+/* PopularArtists starts here */
+.PopularArtistsContainer{
+    width: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    height: max-content;
+}
+
+.ArtistCard{
+    width: calc(100% / 6);
+    height: max-content;
+    margin: 0.2rem auto;
+    padding: 0.2rem 0.2rem;
+}
+
+#ArtistPlayButton{
+    position: relative;
+}
+
+.ArtistPlayButton{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.2vw;
+    opacity: 0;
+    transition: opacity 0.4s ease; 
+}
+
+.ArtistImage:hover .ArtistPlayButton{
+    opacity: 1;
+}
+
+
+
+.ArtistImage{
+    width: 8vw;
+    height: 8vw;
+    margin: 0.1rem auto;
+}
+
+.ArtistImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ArtistNameText{
+    width: auto;
+}
+
+.ArtistNameText h5{
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.0vw;
+}
+
+.PopularArtistsText{
+    padding-left: 0.05rem;
+    margin-right: 1rem;
+    width: max-content;
+}
+
+.PopularArtistsText h4{
+    margin: 0;
+}
+
+.ArtistMainCard{
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0rem;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+}
+
+/* PopularArtists ends here */
+
+/* RadioChannels starts here */
+.RadioChannelsContainer{
+    width: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    height: max-content;
+}
+
+.RadioChannelsText{
+    padding-left: 0.05rem;
+    margin-right: 1rem;
+    width: max-content;
+}
+
+.RadioChannelsText h4{
+    margin: 0;
+}
+
+
+.RadioImage{
+    position: relative;
+    width: 7.5vw;
+    height: 7.5vw;
+    margin: 0.1rem 0.1rem;
+    padding: 0.2rem 0.2rem;
+}
+
+#RadioImageSquare img{
+    border-radius: 0%;
+}
+
+.RadioImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.RadioNameText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: calc(100% - 1rem);
+}
+
+.RadioNameText h6{
+    text-align: center;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.0vw;
+    cursor: pointer;
+}
+
+.RadioMainCard{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0rem;
+    padding: 0.2rem 0.4rem;
+    overflow-x: scroll;
+    scrollbar-color: transparent transparent;
+    width: 100%;
+}
+
+.RadioCard{
+    width: auto;
+    height: auto;
+    margin: 0.2rem auto;
+    padding: 0.2rem 0.2rem;
+}
+
+/* RadioChannels ends here */
+
+/* MoodThemeBox starts here */
+.RadioChannelsContainer{
+    width: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    height: max-content;
+}
+
+.MoodThemeBoxMainCard{
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0rem;
+}
+
+.MoodThemeBoxCard{
+    width: calc(100% / 3);
+    margin: 0.2rem auto;
+    padding-right: 0.2rem;
+    padding: 0rem 0.2rem;
+}
+
+.MoodThemeBoxImage{
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    margin: 0.1rem 0.1rem;
+    overflow: hidden;
+}
+
+.MoodThemeBoxImage img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.MoodThemeBoxImage:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.MoodThemeBoxText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: calc(100% - 1rem);
+}
+
+.MoodThemeBoxText h6{
+    text-align: center;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.0vw;
+    cursor: pointer;
+}
+
+/* MoodThemeBox ends here */
+
+/* Latest English starts here */
+.LatestReleasesContainer{
+    width: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: max-content;
+}
+
+.LatestReleasesText{
+    padding-left: 0.05rem;
+    margin-right: 1rem;
+    width: max-content;
+}
+
+.LatestReleasesText h4{
+    margin: 0;
+}
+
+
+.LatestReleasesImage{
+    margin: 0.1rem 0.1rem;
+}
+
+
+.LatestReleasesImage img{
+    width: 100%;
+    width: 7.5vw;
+    height: 7.5vw;
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px rgba(167, 212, 167, 0.7);
+}
+
+
+.LatestReleasesNameText {
+    width: 100%;
+    line-height: 1.4;
+    margin-top: 0.2rem;
+}
+
+.LatestReleasesNameText h6,p{
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.0vw;
+}
+
+.LatestReleasesMainCard{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0rem;
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    overflow-X: scroll;
+    scrollbar-color: transparent transparent;
+}
+
+.LatestReleasesCard{
+    width: auto;
+    height: auto;
+    margin: 0.2rem auto;
+    padding: 0.2rem 0.2rem;
+}
+
+/* Latest English ends here */
+
+/* Footer secitons starts here */
+#FooterBox{
+    position: sticky;
+    bottom: 0px;
+    display: none;
+    height: auto;
+    width: 99%;
+    margin: 0.2rem auto;
+    background-color: var(--music-box-bg-color);
+    color: var(--text-white);
+    animation: MusicControlsBoxSlideUP 1s ease-in forwards alternate;
+}
+
+@keyframes MusicControlsBoxSlideUP{
+    0%{
+        transform: translateY(100px);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#MusicControlsBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: max-content;
+    width: 95%;
+    margin: 0.1rem auto;
+    padding: 0.2rem 0.2rem;
+}
+
+.MusicControlsBoxCard{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
+    width: max-content;
+}
+
+
+.MusicControlsBoxCardLeft{
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    line-height: 1.2;
+}
+
+.MusicControlsBoxCardRight{
+    font-size: 1.2vw;
+    margin: 0rem 0.2rem;
+}
+
+.MusicControlsBoxCardImage{
+    width: 4vw;
+    height: 4vw;
+}
+
+.MusicControlsBoxCardImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.MusicControlsBoxCardImage img:hover{
+    cursor: pointer;
+}
+
+.MusicControlsBoxCardContent p{
+    padding: 0rem 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8vw;
+}
+
+.MusicControlsBoxCardContent p span{
+    font-weight: normal;
+}
+
+.textBold{
+    font-weight: bolder;
+}
+
+#favouriteIcon{
+    font-size: 1.2vw;
+}
+#BanIcon{
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+#favouriteIcon:hover{
+    cursor: pointer;
+}
+
+.MusicPlayingControlsBox{
+    margin: 0.1rem auto;
+    width: 45%;
+}
+
+.MusicPlayingControlsContent{
+    margin: 0.1rem auto;
+    text-align: center;
+    padding: 0.4rem 0rem;
+    width: 80%;
+}
+
+.MusicPlayingControlsContent i{
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.MusicPlayingControlsProgressBar{
+    margin: 0.1rem auto;
+    padding: 0.2rem 0.8rem;
+    width: 90%;
+    text-align: center;
+}
+
+.MusicPlayingControlsProgressBar p{
+    font-weight: bold;
+    margin: 0;
+}
+
+#ProgressBar{
+    width: 85%;
+}
+  
+
+.VolumeControlsBox{
+    margin: 0.1rem 0.2rem;
+    width: 30%;
+}
+
+.VolumeControlsBoxContent{
+    margin: 0.4rem 0.2rem;
+    text-align: center;
+}
+
+.VolumeControlsBoxContent i{
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Footer secitons ends here */
+
+/* Media Queries starts here */
+
+@media (max-width: 950px){
+    /* MainBox starts here */
+    #mainBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    /* MainBox ends here */
+    
+    /* Article section starts here */
+    .articleContainer{
+        width: 100%;
+    }
+    
+    .cardBox{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .card{
+        min-height: 140px;
+    }
+    
+    .card:hover{
+        width: calc((100% + 30rem)  / 3);
+        z-index: 3;
+    }
+    
+    /* Article section ends here */
+
+    /* Aside section starts here */
+    .asideContainer{
+        width: 100%;
+        margin-top: 0.4rem;
+    }
+
+    .queueName h3{
+        margin: 0.1rem 0.1rem;
+        font-size: 1.8vw;
+    }
+
+    .queueDropdownContainer h5{
+        margin: 0.1rem 0.1rem;
+    }
+
+
+    #queueDropdown{
+        border: none;
+        padding: 0.4rem 0.2rem;
+        font-size: 1.6vw;
+    }
+
+    #queueDropdown option {
+        border: none;
+        padding: 0.4rem 0.2rem;
+    }
+
+
+    /* Aside section ends here */
+
+    /* SongList starts here */
+
+    .queueSongContainer{
+        width: 98%;
+        margin: 0rem auto;
+        max-height: 50vh;
+        overflow-y: scroll;
+        scrollbar-color: transparent transparent;
+    }
+
+    .songListContent{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .songListInside{
+        margin: 0.2rem 0rem;
+    }
+
+    .songName {
+        margin-left: 0.62rem;
+        font-weight: bold;
+        font-size: 4rem;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 1.4vw;
+    }
+
+    .songName span {
+        font-size: 1.2vw;
+    }
+
+    .fa-heart {
+        font-size: 1.8vw;
+    }
+
+    .listNumber{
+        margin-right: 0.62rem;
+        padding-left: 0.2rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.8vw;
+    }
+
+    .fa-headphones-simple{
+        font-size: 1.8vw;
+    }
+
+    /* SongList ends here */
+
+    /* Latest releases starts here */
+    .latestReleasesTopContainer{
+        width: 100%;
+        margin: 0rem auto;
+        margin-top: 1rem;
+        height: max-content;
+    }
+
+    .latestReleasesTopCard{
+        width: calc(100% / 2);
+    }
+
+    .latestReleasesPlayButton{
+        font-size: 1.8vw;
+    }
+
+    .lastestReleasesText h4{
+        font-size: 1.8vw;
+    }
+
+    .latestReleasesCardContent p{
+        font-size: 1.4vw;
+    }
+
+    .latestReleasesCardImage{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .songDuration p{
+        font-size: 1.4vw;
+    }
+
+    #moreOptionsIcon{
+        font-size: 1.4rem;
+    }
+
+/* Latest releases ends here */
+    /* PopularArtists starts here */
+
+    .ArtistCard{
+        width: calc(100% / 6);
+        height: max-content;
+    }
+
+    .ArtistPlayButton{
+        font-size: 1.8vw;
+    }
+
+    .ArtistImage{
+        width: 11vw;
+        height: 11vw;
+        margin: 0.1rem auto;
+        padding: 0.2rem 0.2rem;
+    }
+
+    .ArtistImage img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ArtistNameText h5{
+        font-size: 1.4vw;
+    }
+
+    .PopularArtistsText h4{
+        margin: 0;
+        font-size: 1.8vw;
+    }
+
+    /* PopularArtists ends here */
+
+    /* RadioChannels starts here */
+    .RadioChannelsText h4{
+        font-size: 1.8vw;
+    }
+
+
+    .RadioImage{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #RadioImageSquare img{
+        border-radius: 0%;
+    }
+
+    .RadioImage img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .RadioNameText h6{
+        font-size: 1.3vw;
+    }
+
+    /* RadioChannels ends here */
+    /* MoodThemeBox starts here */
+    .MoodThemeBoxCard{
+        width: calc(100% / 3);
+    }
+
+    .MoodThemeBoxImage{
+        width: 100%;
+        height: 14vw;
+    }
+
+    .MoodThemeBoxText h6{
+        font-size: 1.6vw;
+    }
+
+    /* MoodThemeBox ends here */
+
+    /* Latest English starts here */
+    .LatestReleasesText h4{
+        font-size: 1.8vw;
+    }
+
+    .LatestReleasesImage{
+        width: 10.5vw;
+        width: 10.5vw;
+    }
+
+    .LatestReleasesNameText{
+        margin-top: 0.2rem;
+    }
+
+    .LatestReleasesNameText h6,p{
+        font-size: 1.3vw;
+    }
+
+    /* Latest English ends here */
+
+    /* Footer section starts here */
+     .MusicControlsBoxCard{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .MusicControlsBoxCardRight{
+        margin: 0.2rem 0.2rem;
+        padding: 0.1rem 0.1rem;
+        width: 93%;
+    }
+
+    .moreOptions{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .MusicControlsBoxCardImage{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .MusicControlsBoxCardContent p{
+        font-size: 1.2vw;
+    }
+    
+    #favouriteIcon{
+        font-size: 1.5vw;
+    }
+    #BanIcon{
+        font-size: 1.5vw;
+    }
+    
+    .MusicPlayingControlsBox{
+        margin: 0.1rem auto;
+        width: 45%;
+    }
+    
+    
+    .MusicPlayingControlsContent i{
+        font-size: 1.6vw;
+    }
+    
+    .MusicPlayingControlsProgressBar{
+        width: 90%;
+    }
+    
+    .MusicPlayingControlsProgressBar p{
+        font-size: 1.6vw;
+    }
+    
+    #ProgressBar{
+        width: 70%;
+    } 
+
+    #SoundProgressBar{
+        width: 50%;
+    }
+    
+    .VolumeControlsBox{
+        margin: 0.1rem 0.4rem;
+        width: max-content;
+    }
+    
+    .VolumeControlsBoxContent{
+        margin: 0.4rem 0.2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .VolumeControlsBoxContent i{
+        font-size: 1.2vw;
+    }
+    
+    /* Footer secitons ends here */
+
+}
+
+@media (max-width: 750px){
+    /*navbar starts here */
+    .searchContainer,.notificationIcon,.userProfile{
+        display: none;
+    }
+
+    #UserProfile2{
+        display: block;
+        font-size: 2.4rem;
+    }
+
+    #UserProfile2>.fa-bars{
+        cursor: pointer;
+    }
+
+    .navRightContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        border: none;
+        padding: 0.4rem 0.2rem;
+        width: max-content;
+    }
+
+    #HamburgerMenuContainer{
+        display: none;
+        box-sizing: border-box;
+        height: max-content;
+        width: 99%;
+        margin: 0rem auto;
+        padding: 0.4rem 0.4rem;
+    }
+
+    /* .menu-slide-down {
+        animation: slideDown 1s ease-in forwards;
+    }
+    
+    .menu-slide-up {
+        animation: slideUp 10s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    } */
+    
+
+    .HamburgerMenuContent h3{
+        margin: 0.1rem 0rem;
+    }
+
+    .HamburgerMenuContent{
+        padding: 0rem 0.2rem;
+    }
+
+    .HamburgerMenuText{
+        font-size: 0.8rem;
+        cursor: pointer;
+        margin: 0.8rem 0rem;
+    }
+
+    /*navbar ends here */
+    /* MainBox starts here */
+    #mainBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    /* MainBox ends here */
+    
+    /* Article section starts here */
+    .articleContainer{
+        width: 100%;
+    }
+    
+    .cardBox{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .card{
+        min-height: 140px;
+    }
+    
+    .card:hover{
+        width: calc((100% + 30rem)  / 3);
+        z-index: 3;
+    }
+    
+    
+    /* Article section ends here */
+
+    /* Aside section starts here */
+    .asideContainer{
+        width: 100%;
+        margin-top: 0.4rem;
+    }
+
+    .queueName h3{
+        margin: 0.1rem 0.1rem;
+        font-size: 2.2vw;
+    }
+
+    .queueDropdownContainer h5{
+        margin: 0.1rem 0.1rem;
+    }
+
+
+    #queueDropdown{
+        border: none;
+        padding: 0.4rem 0.2rem;
+        font-size: 2vw;
+    }
+
+    #queueDropdown option {
+        border: none;
+        padding: 0.4rem 0.2rem;
+    }
+
+
+    /* Aside section ends here */
+
+    /* SongList starts here */
+
+    .queueSongContainer{
+        width: 98%;
+        margin: 0rem auto;
+        max-height: 50vh;
+        overflow-y: scroll;
+        scrollbar-color: transparent transparent;
+    }
+
+    .songListContent{
+        width: 7.4vw;
+        height: 7.4vw;
+    }
+
+    .songListInside{
+        margin: 0.2rem 0rem;
+    }
+
+    .songName {
+        margin-left: 0.62rem;
+        font-weight: bold;
+        font-size: 4rem;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 1.8vw;
+    }
+
+    .songName span {
+        font-size: 1.6vw;
+    }
+
+    .fa-heart {
+        font-size: 2.2vw;
+    }
+
+    .listNumber{
+        margin-right: 0.62rem;
+        padding-left: 0.2rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2.2vw;
+    }
+
+    .fa-headphones-simple{
+        font-size: 2.2vw;
+    }
+
+    /* SongList ends here */
+
+    /* Latest releases starts here */
+    .latestReleasesTopContainer{
+        width: 100%;
+        margin: 0rem auto;
+        margin-top: 1rem;
+        height: max-content;
+    }
+
+    .latestReleasesTopCard{
+        width: calc(100% / 2);
+    }
+
+    .latestReleasesPlayButton{
+        font-size: 2.2vw;
+    }
+
+    .lastestReleasesText h4{
+        font-size: 2.2vw;
+    }
+
+    .latestReleasesCardContent p{
+        font-size: 1.6vw;
+    }
+
+    .latestReleasesCardImage{
+        width: 8.5vw;
+        height: 8.5vw;
+    }
+
+    .songDuration p{
+        font-size: 1.6vw;
+    }
+
+    #moreOptionsIcon{
+        font-size: 1.6rem;
+    }
+
+/* Latest releases ends here */
+    /* PopularArtists starts here */
+
+    .ArtistCard{
+        width: calc(100% / 6);
+        height: max-content;
+    }
+
+    .ArtistPlayButton{
+        font-size: 2.2vw;
+    }
+
+    .ArtistImage{
+        width: 12vw;
+        height: 12vw;
+        margin: 0.1rem auto;
+        padding: 0.2rem 0.2rem;
+    }
+
+    .ArtistImage img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ArtistNameText h5{
+        font-size: 1.7vw;
+    }
+
+    .PopularArtistsText h4{
+        margin: 0;
+        font-size: 2.2vw;
+    }
+
+    /* PopularArtists ends here */
+
+    /* RadioChannels starts here */
+    .RadioChannelsText h4{
+        font-size: 2.2vw;
+    }
+
+
+    .RadioImage{
+        width: 10.5vw;
+        height: 10.5vw;
+    }
+
+    #RadioImageSquare img{
+        border-radius: 0%;
+    }
+
+    .RadioImage img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .RadioNameText h6{
+        font-size: 1.5vw;
+    }
+
+    /* RadioChannels ends here */
+    /* MoodThemeBox starts here */
+    .MoodThemeBoxCard{
+        width: calc(100% / 3);
+    }
+
+    .MoodThemeBoxImage{
+        width: 100%;
+        height: 16vw;
+    }
+
+    .MoodThemeBoxText h6{
+        font-size: 1.8vw;
+    }
+
+    /* MoodThemeBox ends here */
+
+    /* Latest English starts here */
+    .LatestReleasesText h4{
+        font-size: 2.2vw;
+    }
+
+    .LatestReleasesImage{
+        width: 11.5vw;
+        width: 11.5vw;
+    }
+
+    .LatestReleasesNameText{
+        margin-top: 0.2rem;
+    }
+
+    .LatestReleasesNameText h6,p{
+        font-size: 1.5vw;
+    }
+
+    /* Latest English ends here */
+
+    /* Footer section starts here */
+    .MusicControlsBoxCard{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .MusicControlsBoxCardRight{
+        margin: 0.2rem 0.2rem;
+        padding: 0.1rem 0.1rem;
+        width: 93%;
+    }
+
+    .moreOptions{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .MusicControlsBoxCardImage{
+        width: 7vw;
+        height: 7vw;
+    }
+    
+    .MusicControlsBoxCardContent p{
+        font-size: 1.4vw;
+    }
+    
+    #favouriteIcon{
+        font-size: 1.8vw;
+    }
+    #BanIcon{
+        font-size: 1.8vw;
+    }
+    
+    .MusicPlayingControlsBox{
+        margin: 0.1rem auto;
+        width: 45%;
+    }
+    
+    
+    .MusicPlayingControlsContent i{
+        font-size: 2.2vw;
+    }
+    
+    .MusicPlayingControlsProgressBar{
+        width: 90%;
+    }
+    
+    .MusicPlayingControlsProgressBar p{
+        font-size: 1.8vw;
+    }
+    
+    #ProgressBar{
+        width: 50%;
+    } 
+
+    #SoundProgressBar{
+        width: 40%;
+    }
+    
+    .VolumeControlsBox{
+        margin: 0.1rem 0.4rem;
+        width: max-content;
+    }
+    
+    .VolumeControlsBoxContent{
+        margin: 0.4rem 0.2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .VolumeControlsBoxContent i{
+        font-size: 1.4vw;
+    }
+    
+    /* Footer secitons ends here */
+
+}
+
+/* Media Queries ends here */

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist | Music Player</title>
+    <script src="https://kit.fontawesome.com/7e99a9e738.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Artist Page Style.css">
+</head>
+<body>
+    <!-- Navbar starts here -->
+    <nav id="navBox">
+        <!-- Ninjalogo and page name starts here -->
+            <div id="navBoxContainer">
+                <div class="navLeftContainer">
+                    <div class="ninjaLogo">
+                        <a href="index.html">
+                            <img src="https://imgcdn.stablediffusionweb.com/2024/5/13/4240c2df-ec70-42e2-9c4e-b63239779812.jpg" alt="No_img">
+                        </a>
+                    </div>
+                    <div class="pageName">
+                        <h4>Artists</h4>
+                    </div>
+                </div>
+            <!-- Ninjalogo and page name ends here -->
+            <!-- Search bar and user profile starts here -->
+                <div class="navRightContainer">
+                        <div class="searchContainer">
+                            <input type="search" name="search" id="searchInput" placeholder="Search">
+                            <i id="SearchButton" type="submit" class="fa-solid fa-magnifying-glass"></i>
+                            <i id="microphoneButton" class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div class="notificationIcon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="userProfile">
+                            <img src="https://imgcdn.stablediffusionweb.com/2024/5/13/69beea7b-c131-4141-a0a3-e1a8e6332d74.jpg" alt="No_img">
+                        </div>
+                        <div id="UserProfile2" class="userProfile">
+                            <i id="HamburgerIcon" class="fa-solid fa-bars"></i>
+                        </div>
+                </div>
+            </div>
+        <!-- Search bar and user profile ends here -->
+        <div id="HamburgerMenuContainer">
+            <div class="HamburgerMenuContent">
+                <div class="HamburgerInsideMenu">
+                    <h3>Menu</h3>
+                    <!-- <h3><i class="fa-solid fa-xmark"></i></h3> -->
+                </div>
+                <p class="HamburgerMenuText"><span><i class="fa-solid fa-user"></i></span> User Profile</p>
+                <p class="HamburgerMenuText"><span><i class="fa-regular fa-bell"></i></i></span> Notifications</p>
+                <p class="HamburgerMenuText"><span><i class="fa-solid fa-gear"></i></span> Settings</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- Artist Main section starts here -->
+        <main id="ArtistmainBox">
+            <!-- Artist Article section starts here -->
+                <div class="ArtistarticleContainer">
+                        <div class="ArtistarticleCardContainer">
+                            <div class="ArtistarticleImage">
+                                <img src="https://artist1.cdn107.com/f7d/f7df8504d3756b4052c381941d684a51_xl.jpg" alt="No_Img">
+                            </div>
+                            <div class="ArtistarticleRight">
+                                <div class="ArtistarticleHeaderText">
+                                    <h1>ColdPlay</h1>
+                                    <h4>851 Followers</h4>
+                                </div>
+                                <div class="ArtistarticleMainText">
+                                    <p class="BandName">British Band</p>
+                                    <p class="BandDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo aut omnis voluptate beatae ipsum maiores quas dignissimos ad! Delectus sed ea voluptatem numquam blanditiis omnis eos, excepturi temporibus ratione, corrupti eveniet distinctio quia facere consequatur libero officiis, illo dolores cum assumenda.</p>
+                                </div>
+                                <div class="ArtistarticleButtons">
+                                    <button type="button" id="PlayAll">Play All</button>
+                                    <button type="button" id="Follow">Follow</button>
+                                    <p id="Tracks">247 Tracks | 128 Albums</p>
+                                </div>
+                            </div>
+                        </div> 
+                         <!-- Artist songs list section starts here -->
+                        <div class="ArtistSongslist">
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">01</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Mirage <br>
+                                        <span>
+                                            Else
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Worry Bout Us <br>
+                                        <span>
+                                            Rossie Lowe
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">03</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        New Skin <br>
+                                        <span>
+                                            Flume
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">04</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Mirage <br>
+                                        <span>
+                                            Else
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">05</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Worry Bout Us <br>
+                                        <span>
+                                            Rossie Lowe
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">06</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        New <br>
+                                        <span>
+                                            Skin
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">07</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Worry Bout Us <br>
+                                        <span>
+                                            Roise Lowe
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        New Skin <br>
+                                        <span>
+                                            Flume
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">09</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Mirage <br>
+                                        <span>
+                                            Else
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">10</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        Worry Bout Us <br>
+                                        <span>
+                                            Rosie Lowe
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            <li class="ArtistSongslistContainer">
+                                <div class="ArtistSongslistInside">
+                                    <div class="ArtistSongslistInsideNumber">11</div>
+                                    <div class="ArtistSongslistContent">
+                                        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                    </div>
+                                    <div class="ArtistSongslistSongName">
+                                        New Skin <br>
+                                        <span>
+                                            Flume
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ArtistSongslistFavouriteIcon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div> 
+                            </li>
+                            
+                        </div>
+                        <!-- Artist songs list section ends here -->
+                </div>
+            <!-- Artist Article section ends here -->
+            <!-- Artist Aside section starts here -->
+                <aside class="SimilarArtistasideContainer">
+                    <!-- RecentlyPlayed Aside section starts here -->
+                <div class="RecentlyPlayedContainer">
+                    <div class="SimilarArtistasideHeader">
+                        <div class="SimilarArtistName">
+                            <h3>Recently Played</h3>
+                        </div>
+                        <div class="ViewAllContainer">
+                            <h5>
+                                <a href="#">View All</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="RecentlyPlayedTopCard">
+                        <div class="RecentlyPlayedCardleft">
+                            <div class="RecentlyPlayedCardImage">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                            </div>
+                            <div class="RecentlyPlayedCardContent"> 
+                                <p class="RecentlyPlayedtextBold">Imagine Dragons<br><span>Pop Band</span></p>
+                            </div>
+                        </div>
+                        <div class="RecentlyPlayedCardRight">
+                            <div class="RecentlyPlayedmoreOptions">
+                                <i id="RecentlyPlayedmoreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="RecentlyPlayedsongDuration">
+                                <p>4:44</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="RecentlyPlayedTopCard">
+                        <div class="RecentlyPlayedCardleft">
+                            <div class="RecentlyPlayedCardImage">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                            </div>
+                            <div class="RecentlyPlayedCardContent"> 
+                                <p class="RecentlyPlayedtextBold">Imagine Dragons<br><span>Pop Band</span></p>
+                            </div>
+                        </div>
+                        <div class="RecentlyPlayedCardRight">
+                            <div class="RecentlyPlayedmoreOptions">
+                                <i id="RecentlyPlayedmoreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="RecentlyPlayedsongDuration">
+                                <p>4:44</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="RecentlyPlayedTopCard">
+                        <div class="RecentlyPlayedCardleft">
+                            <div class="RecentlyPlayedCardImage">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                            </div>
+                            <div class="RecentlyPlayedCardContent"> 
+                                <p class="RecentlyPlayedtextBold">Imagine Dragons<br><span>Pop Band</span></p>
+                            </div>
+                        </div>
+                        <div class="RecentlyPlayedCardRight">
+                            <div class="RecentlyPlayedmoreOptions">
+                                <i id="RecentlyPlayedmoreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="RecentlyPlayedsongDuration">
+                                <p>4:44</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- RecentlyPlayed Aside section ends here -->
+                    <div class="SimilarArtistasideHeader">
+                        <div class="SimilarArtistName">
+                            <h3>Similar Artists</h3>
+                        </div>
+                        <div class="ViewAllContainer">
+                            <h5>
+                                <a href="#">View All</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- SimilarArtist Queuelist starts here -->
+                    <div class="SimilarArtistqueueList">
+                        <div class="SimilarArtistqueueSongContainer">
+                            <!-- SimilarArtist SongList starts here -->
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">01</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">03</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">04</div>
+                                        <div id="SimilarArtistPlayButtonList" class="SimilarArtistsongListContent">
+                                            <i id="SimilarArtistPlayButton" class="fa-solid fa-play"></i>
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">05</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">06</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">07</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">09</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">10</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">11</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">12</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">14</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">15</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">16</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">17</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">18</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">20</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Worry Bout Us <br>
+                                            <span>
+                                                Rossie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">21</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="SimilarArtistsongList">
+                                    <div class="SimilarArtistsongListInside">
+                                        <div class="SimilarArtistlistNumber">22</div>
+                                        <div class="SimilarArtistsongListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="SimilarArtistsongName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="SimilarArtistfavouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                            <!-- SimilarArtist SongList ends here -->
+                        </div>
+                    </div>
+                    <!-- SimilarArtist Queuelist ends here -->
+                </aside>
+            <!-- Artist Aside section ends here -->
+        </main>
+    <!-- Main section ends here -->
+    <!-- Footer secitons starts here -->
+    <!-- Footer secitons starts here -->
+    <footer id="FooterBox">
+        <div id="MusicControlsBox">
+            <div class="MusicControlsBoxCard">
+                <div class="MusicControlsBoxCardLeft">
+                    <div class="MusicControlsBoxCardImage">
+                        <img src="https://imgcdn.stablediffusionweb.com/2024/5/13/6c6372e2-a165-4566-9bba-cd89ab7ed955.jpg" alt="No_Img">
+                    </div>
+                    <div class="MusicControlsBoxCardContent">
+                        <p class="textBold">Imagine by joh..<br><span>Aug 11,2017</span></p>
+                    </div>
+                </div>
+                <div class="MusicControlsBoxCardRight">
+                    <div class="moreOptions">
+                        <i id="favouriteIcon" class="fa-regular fa-heart"></i>
+                        <i id="BanIcon" class="fa-solid fa-ban"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="MusicPlayingControlsBox">
+                <div class="MusicPlayingControlsContent">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-pause"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+                <div class="MusicPlayingControlsProgressBar">
+                    <p>1:39<input id="ProgressBar" min="0" max="100" value="30" type="range">4:44</p>
+                </div>
+            </div>
+            <div class="VolumeControlsBox">
+                <div class="VolumeControlsBoxContent">
+                    <i class="fa-solid fa-sliders"></i>
+                    <i class="fa-solid fa-computer"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input id="SoundProgressBar" min="0" max="100" value="20" type="range" >
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Footer secitons ends here -->
+<!-- Contact us sections starts here -->
+    <!-- <footer id="ContactUs">
+        <div class="ContactUsText">
+            <h4>Contact Us At</h4>
+        </div>
+        <div class="ContactUsContainer">
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="github">
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <div class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </footer> -->
+<!-- Contact us sections ends here -->
+
+    <script src="script.js"></script>
+</body>
+</html>

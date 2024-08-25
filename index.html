@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Music Player</title>
+    <script src="https://kit.fontawesome.com/7e99a9e738.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Goto top section starts here -->
+    <div class="GoToTopContainer">
+        <div class="GoToTopContent">
+            <a href="#">GoTo Top</a>
+        </div>
+    </div>
+    <!-- Goto top section ends here -->
+    <!-- Navbar starts here -->
+    <nav id="navBox">
+        <!-- Ninjalogo and page name starts here -->
+            <div id="navBoxContainer">
+                <div class="navLeftContainer">
+                    <div class="ninjaLogo">
+                        <img src="https://imgcdn.stablediffusionweb.com/2024/5/13/4240c2df-ec70-42e2-9c4e-b63239779812.jpg" alt="No_img">
+                    </div>
+                    <div class="pageName">
+                        <h4><a href="index.html">Home</a></h4>
+                    </div>
+                </div>
+            <!-- Ninjalogo and page name ends here -->
+            <!-- Search bar and user profile starts here -->
+                <div class="navRightContainer">
+                        <div class="searchContainer">
+                            <input type="search" name="search" id="searchInput" placeholder="Search">
+                            <i id="SearchButton" type="submit" class="fa-solid fa-magnifying-glass"></i>
+                            <i id="microphoneButton" class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div class="notificationIcon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="userProfile">
+                            <img src="https://imgcdn.stablediffusionweb.com/2024/5/13/69beea7b-c131-4141-a0a3-e1a8e6332d74.jpg" alt="No_img">
+                        </div>
+                        <div id="UserProfile2" class="userProfile">
+                            <i id="HamburgerIcon" class="fa-solid fa-bars"></i>
+                        </div>
+                </div>
+            </div>
+        <!-- Search bar and user profile ends here -->
+        <div id="HamburgerMenuContainer">
+            <div class="HamburgerMenuContent">
+                <div class="HamburgerInsideMenu">
+                    <h3>Menu</h3>
+                    <!-- <h3><i class="fa-solid fa-xmark"></i></h3> -->
+                </div>
+                <p class="HamburgerMenuText"><span><i class="fa-solid fa-user"></i></span> User Profile</p>
+                <p class="HamburgerMenuText"><span><i class="fa-regular fa-bell"></i></i></span> Notifications</p>
+                <p class="HamburgerMenuText"><span><i class="fa-solid fa-gear"></i></span> Settings</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- Main section starts here -->
+        <main id="mainBox">
+            <!-- Article section starts here -->
+                <div class="articleContainer">
+                    <div class="cardBox">
+                        <div class="card card1"><img src="https://images.pexels.com/photos/167514/pexels-photo-167514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_img"></div>
+                        <div class="card card2"><img src="https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_img"></div>
+                        <div class="card card3"><img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_img"></div>
+                    </div>
+                    <!-- Latest releases starts here -->
+                <div class="latestReleasesTopContainer">
+                    <div class="lastestReleasesText">
+                        <h4>Latest Release</h4>
+                    </div>
+                    <div class="latestReleasesTopMainCard">
+                        <div class="latestReleasesTopCard">
+                            <div class="latestReleasesCardleft">
+                                <div id="latestReleasesPlayButtonList" class="latestReleasesCardImage">
+                                    <i id="PlayButton1" class="fa-solid fa-play latestReleasesPlayButton"></i>
+                                    <img src="https://m.media-amazon.com/images/I/61BxpmUtuYL._UF1000,1000_QL80_.jpg" alt="No_Img">
+                                </div>
+                                <div class="latestReleasesCardContent">
+                                    <p class="textBold">Onism<br><span>Aug 11,2017</span></p>
+                                </div>
+                            </div>
+                            <div class="latestReleasesCardRight">
+                                <div class="moreOptions">
+                                    <i id="moreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <div class="songDuration">
+                                    <p>4:44</p>
+                                </div>
+                                <div class="moreOptionsList1 moreOptionsList">
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-play"></i>
+                                        <span>Play Now</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-plus"></i> <span>Add To Queue</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-heart"></i><span>Add To Favourites</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Get Info</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latestReleasesTopCard">
+                            <div class="latestReleasesCardleft">
+                                <div id="latestReleasesPlayButtonList" class="latestReleasesCardImage">
+                                    <i id="PlayButton2" class="fa-solid fa-play latestReleasesPlayButton"></i>
+                                    <img src="https://m.media-amazon.com/images/I/61BxpmUtuYL._UF1000,1000_QL80_.jpg" alt="No_Img">
+                                </div>
+                                <div class="latestReleasesCardContent">
+                                    <p class="textBold">Onism<br><span>Aug 11,2017</span></p>
+                                </div>
+                            </div>
+                            <div class="latestReleasesCardRight">
+                                <div class="moreOptions">
+                                    <i id="moreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <div class="songDuration">
+                                    <p>4:44</p>
+                                </div>
+                                <div class="moreOptionsList">
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-play"></i>
+                                        <span>Play Now</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-plus"></i> <span>Add To Queue</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-heart"></i><span>Add To Favourites</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Get Info</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latestReleasesTopMainCard">
+                        <div class="latestReleasesTopCard">
+                            <div class="latestReleasesCardleft">
+                                <div id="latestReleasesPlayButtonList" class="latestReleasesCardImage">
+                                    <i id="PlayButton3" class="fa-solid fa-play latestReleasesPlayButton"></i>
+                                    <img src="https://m.media-amazon.com/images/I/61BxpmUtuYL._UF1000,1000_QL80_.jpg" alt="No_Img">
+                                </div>
+                                <div class="latestReleasesCardContent">
+                                    <p class="textBold">Onism<br><span>Aug 11,2017</span></p>
+                                </div>
+                            </div>
+                            <div class="latestReleasesCardRight">
+                                <div class="moreOptions">
+                                    <i id="moreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <div class="songDuration">
+                                    <p>4:44</p>
+                                </div>
+                                <div class="moreOptionsList3 moreOptionsList">
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-play"></i>
+                                        <span>Play Now</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-plus"></i> <span>Add To Queue</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-heart"></i><span>Add To Favourites</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Get Info</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latestReleasesTopCard">
+                            <div class="latestReleasesCardleft">
+                                <div id="latestReleasesPlayButtonList" class="latestReleasesCardImage">
+                                    <i id="PlayButton4" class="fa-solid fa-play latestReleasesPlayButton"></i>
+                                    <img src="https://m.media-amazon.com/images/I/61BxpmUtuYL._UF1000,1000_QL80_.jpg" alt="No_Img">
+                                </div>
+                                <div class="latestReleasesCardContent">
+                                    <p class="textBold">Onism<br><span>Aug 11,2017</span></p>
+                                </div>
+                            </div>
+                            <div class="latestReleasesCardRight">
+                                <div class="moreOptions">
+                                    <i id="moreOptionsIcon" class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <div class="songDuration">
+                                    <p>4:44</p>
+                                </div>
+                                <div class="moreOptionsList4 moreOptionsList">
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-play"></i>
+                                        <span>Play Now</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-plus"></i> <span>Add To Queue</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-heart"></i><span>Add To Favourites</span>
+                                    </li>
+                                    <li class="moreOptionsListItem">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Get Info</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Latest releases starts here -->
+                <!-- PopularArtists starts here -->
+                <div class="PopularArtistsContainer">
+                    <div class="PopularArtistsText">
+                        <h4>Popular Artists</h4>
+                    </div>
+                    <div class="ArtistMainCard">
+                        <div class="ArtistCard">
+                            <div class="ArtistImage">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQu43PjqJrLCeMwTVE6ihYS0GZjhIPR8Np1a5xtS2kA&s" alt="No_Img">
+                            </div>
+                            <div class="ArtistNameText">
+                                <h5>Ed Sheeran</h5>
+                            </div>
+                        </div>
+                            <div class="ArtistCard">
+                                <div id="ArtistPlayButton" class="ArtistImage">
+                                    <a href="Artist Page.html">
+                                    <i class="fa-solid fa-play ArtistPlayButton"></i>
+                                    <img src="https://artist1.cdn107.com/f7d/f7df8504d3756b4052c381941d684a51_xl.jpg" alt="No_Img"></a>
+                                </div>
+                                <div class="ArtistNameText">
+                                    <h5>ColdPlay</h5>
+                                </div>
+                            </div>
+                        <div class="ArtistCard">
+                            <div class="ArtistImage">
+                                <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/01/zayn-malik-1705750698.jpg" alt="No_Img">
+                            </div>
+                            <div class="ArtistNameText">
+                                <h5>Zayn</h5>
+                            </div>
+                        </div>
+                        <div class="ArtistCard">
+                            <div class="ArtistImage">
+                                <img src="https://lastfm.freetls.fastly.net/i/u/ar0/efdb59add7dc40f6afbcdd090434fe76.jpg" alt="No_Img">
+                            </div>
+                            <div class="ArtistNameText">
+                                <h5>Charlie Puth</h5>
+                            </div>
+                        </div>
+                        <div class="ArtistCard">
+                            <div class="ArtistImage">
+                                <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F27ff8ba7-00e2-4622-92dd-ea06931a6296.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1" alt="No_Img">
+                            </div>
+                            <div class="ArtistNameText">
+                                <h5>Imagine Dragon</h5>
+                            </div>
+                        </div>
+                        <div class="ArtistCard">
+                            <div class="ArtistImage">
+                                <img src="https://www.billboard.com/wp-content/uploads/2023/10/Bruno-Mars-oct-21-billboard-1548.jpg?w=942&h=623&crop=1" alt="No_Img">
+                            </div>
+                            <div class="ArtistNameText">
+                                <h5>Bruno Mars</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PopularArtists ends here -->
+                <!-- RadioChannels starts here -->
+                <div class="RadioChannelsContainer">
+                    <div class="RadioChannelsText">
+                        <h4>Radio Channels</h4>
+                    </div>
+                    <div class="RadioMainCard">
+                        <div class="RadioCard">
+                            <div id="RadioImageSquare" class="RadioImage">
+                                <img src="https://img.freepik.com/free-psd/retro-music-with-vintage-background_1419-2391.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1708041600&semt=ais" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Stations</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://images.pexels.com/photos/887349/pexels-photo-887349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Love</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://us.123rf.com/450wm/martm/martm1205/martm120500038/14257317-colorful-music-background-with-vinyl-and-autumn-leaves.jpg?ver=6" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Retro</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://images.pexels.com/photos/3355735/pexels-photo-3355735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Chill</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://source.boomplaymusic.com/group10/M00/03/14/04dd9095f7c04b12814e6d4752299527_320_320.jpg" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Workout</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://www.shutterstock.com/image-illustration/digital-illustration-rock-guitarist-600nw-2232762717.jpg" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Rock</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="RadioCard">
+                            <div class="RadioImage">
+                                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pop-music-album-cover-design-template-%281%29-f3b873e61465d4524bb99bf02a56c649_screen.jpg?ts=1706311822" alt="No_Img">
+                                <div class="RadioNameText">
+                                        <h6>Pop</h6>
+                                </div>
+                            </div>
+                        </div> 
+
+                    </div>
+                </div>
+                <!-- RadioChannels ends here -->
+                <!-- MoodThemeBox starts here -->
+                <div class="MoodThemeBoxContainer">
+                    <div class="MoodThemeBoxMainCard">
+                        <div class="MoodThemeBoxCard">
+                            <div class="MoodThemeBoxImage">
+                                <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="No_Img">
+                                <div class="MoodThemeBoxText">
+                                        <h6>Party</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="MoodThemeBoxCard">
+                            <div class="MoodThemeBoxImage">
+                                <img src="https://images.pexels.com/photos/2381596/pexels-photo-2381596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="No_Img">
+                                <div class="MoodThemeBoxText">
+                                        <h6>Electronic</h6>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="MoodThemeBoxCard">
+                            <div class="MoodThemeBoxImage">
+                                <img src="https://images.pexels.com/photos/5420712/pexels-photo-5420712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="No_Img">
+                                <div class="MoodThemeBoxText">
+                                        <h6>Road Trip</h6>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- MoodThemeBox ends here -->
+                <!-- Latest Starts here -->
+                <div class="LatestReleasesContainer">
+                    <div class="LatestReleasesText">
+                        <h4>Latest English</h4>
+                    </div>
+                    <div class="LatestReleasesMainCard">
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0UGzD6ya9nGbjua8K0DqLI-J00UPPM1zoYjSfrn_JGg&s" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzmnb606b8aDxgJ2Vnj1gdlrWFDPt4fOAuoWrmBQR4g&s" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://external-preview.redd.it/IbJk95tMFlXta5_kPaRCmAF5hJWAS6QKmhMdcD294J8.jpg?auto=webp&s=a80c49da7f730ba47bde76c646606216a3b0b6cf" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://www.charlieintel.com/cdn-cgi/image/width=3840,quality=60,format=auto/https://editors.charlieintel.com/wp-content/uploads/2023/09/21/Assassins-Creed-Mirage-How-big-is-Baghdad-compared-to-past-games.jpeg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="LatestReleasesContainer">
+                    <div class="LatestReleasesText">
+                        <h4>Latest Telugu</h4>
+                    </div>
+                    <div class="LatestReleasesMainCard">
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0UGzD6ya9nGbjua8K0DqLI-J00UPPM1zoYjSfrn_JGg&s" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzmnb606b8aDxgJ2Vnj1gdlrWFDPt4fOAuoWrmBQR4g&s" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://external-preview.redd.it/IbJk95tMFlXta5_kPaRCmAF5hJWAS6QKmhMdcD294J8.jpg?auto=webp&s=a80c49da7f730ba47bde76c646606216a3b0b6cf" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="LatestReleasesCard">
+                            <div class="LatestReleasesImage">
+                                <img src="https://www.charlieintel.com/cdn-cgi/image/width=3840,quality=60,format=auto/https://editors.charlieintel.com/wp-content/uploads/2023/09/21/Assassins-Creed-Mirage-How-big-is-Baghdad-compared-to-past-games.jpeg" alt="No_Img">
+                                <div class="LatestReleasesNameText">
+                                        <h6>Onism</h6>
+                                        <p>Aug 11, 2017</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+                    <!-- Latest ends here -->
+                </div>
+                </div>
+            <!-- Article section ends here -->
+            <!-- Aside section starts here -->
+                <aside class="asideContainer">
+                    <div class="asideHeader">
+                        <div class="queueName">
+                            <h3>My Playlist</h3>
+                        </div>
+                        <div class="queueDropdownContainer">
+                            <h5>
+                                <select name="queueDropdownContainer" id="queueDropdown">
+                                    <option value="Queue"selected>Queue</option>
+                                    <option value="List">List</option>
+                                    <option value="Favourites">Favourites</option>
+                                </select>
+                            </h5>
+                        </div>
+                    </div>
+                    <!-- Queuelist starts here -->
+                    <div class="queueList">
+                        <div class="queueSongContainer">
+                            <!-- SongList starts here -->
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">01</div>
+                                        <div class="songListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">
+                                            <i class="fa-solid fa-headphones-simple"></i>
+                                        </div>
+                                        <div class="songListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Rosie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">03</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">04</div>
+                                        <div id="songListPlayButtonList" class="songListContent">
+                                            <i id="songListPlayButton" class="fa-solid fa-play"></i>
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Roise Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">05</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">06</div>
+                                        <div class="songListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">07</div>
+                                        <div class="songListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="songListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Roise Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">09</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">10</div>
+                                        <div class="songListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">11</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">12</div>
+                                        <div class="songListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">
+                                            <i class="fa-solid fa-headphones-simple"></i>
+                                        </div>
+                                        <div class="songListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Rosie Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">14</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">15</div>
+                                        <div class="songListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Roise Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">16</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">17</div>
+                                        <div class="songListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">18</div>
+                                        <div class="songListContent">
+                                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrGC0roaUmw4Z_Bcvh1VFBbnXdyFGC-4lx4RQybk2hc7lYc5rH" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber"><i class="fa-solid fa-headphones-simple"></i></div>
+                                        <div class="songListContent">
+                                            <img src="https://ecsmedia.pl/cdn-cgi/image/width=270,height=270,/c/worry-bout-us-b-iext125363056.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Worry <br>
+                                            <span>
+                                                Roise Lowe
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">20</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">21</div>
+                                        <div class="songListContent">
+                                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/89/b3/ae/89b3ae26-53c6-ecc7-cb2d-e8f6f1a14a47/3614596984001_cover.jpg/800x800cc.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            Mirage <br>
+                                            <span>
+                                                Else
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                                <li class="songList">
+                                    <div class="songListInside">
+                                        <div class="listNumber">22</div>
+                                        <div class="songListContent">
+                                            <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/77871.jpg" alt="No_Img">
+                                        </div>
+                                        <div class="songName">
+                                            New Skin <br>
+                                            <span>
+                                                Flume
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="favouriteIcon">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div> 
+                                </li>
+                            <!-- SongList ends here -->
+                        </div>
+                    </div>
+                    <!-- Queuelist starts here -->
+                </aside>
+            <!-- Aside section ends here -->
+        </main>
+    <!-- Main section ends here -->
+ <!-- Footer secitons starts here -->
+        <footer id="FooterBox">
+            <div id="MusicControlsBox">
+                <div class="MusicControlsBoxCard">
+                    <div class="MusicControlsBoxCardLeft">
+                        <div class="MusicControlsBoxCardImage">
+                            <img src="https://images.pexels.com/photos/1024975/pexels-photo-1024975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="No_Img">
+                        </div>
+                        <div class="MusicControlsBoxCardContent">
+                            <p class="textBold">Imagine by joh..<br><span>Aug 11,2017</span></p>
+                        </div>
+                    </div>
+                    <div class="MusicControlsBoxCardRight">
+                        <div class="moreOptions">
+                            <i id="favouriteIcon" class="fa-regular fa-heart">
+                            </i><i id="BanIcon" class="fa-solid fa-ban"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="MusicPlayingControlsBox">
+                    <div class="MusicPlayingControlsContent">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-solid fa-pause"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="MusicPlayingControlsProgressBar">
+                        <p>1:39<input id="ProgressBar" min="0" max="100" value="30" type="range">4:44</p>
+                    </div>
+                </div>
+                <div class="VolumeControlsBox">
+                    <div class="VolumeControlsBoxContent">
+                        <i class="fa-solid fa-sliders"></i>
+                        <i class="fa-solid fa-computer"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+                        <input id="SoundProgressBar" min="0" max="100" value="20" type="range" >
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- Footer secitons ends here -->
+<!-- Contact us sections starts here -->
+<!-- <footer id="ContactUs">
+    <div class="ContactUsText">
+        <h4>Contact Us At</h4>
+    </div>
+    <div class="ContactUsContainer">
+        <div class="mail">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="github">
+            <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <div class="facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+</footer> -->
+<!-- Contact us sections ends here -->
+
+    <script src="script.js"></script>
+</body>
+</html>
